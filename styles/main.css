@@ -66,7 +66,7 @@ h2 {
    ========================================================================== */
 
 .flow > * + * {
-  margin-top: var(--flow-spacer, 1em);
+  margin-top: var(--flow-spacer, 0.8em);
 }
 
 /* Block
@@ -132,7 +132,7 @@ h2 {
 }
 
 .rating-select {
-  --flow-spacer: 24px;
+  --flow-spacer: 22px;
 
   border: 0;
   padding: 0;
