@@ -53,7 +53,8 @@ Users should be able to:
 
 For me this is the start of a project to build a various components and apps first in vanilla JS and then in frameworks such as Vue, React and Svelte. This component is the vanilla JS version.
 
-**A new approach to CSS**
+**A new approach to CSS:**
+
 I'm also learning [CUBE CSS](https://cube.fyi/), a new methodology for writing CSS by [Andy Bell](https://twitter.com/piccalilli_). So if you see a weird usage of angle brackets in my markups classes, that's why.
 
 Here for instance I am grouping some of my classes in the CUBE CSS style:
@@ -66,7 +67,8 @@ Here for instance I am grouping some of my classes in the CUBE CSS style:
 - Block
 - Exception
 
-**A new accessibility best practice**
+**A new accessibility best practice:**
+
 Originally my solution did not use a fieldset or radio buttons to select the rating. Someone was kind enough to point out that using a fieldset would provide a better user-experience for those with accessibility requirements.
 
 The CSS I used to achieve the same design using radio buttons might be useful to some, as custom radio buttons can be tricky. Search for the comment **custom radio buttons** in `styles/main.css`.
