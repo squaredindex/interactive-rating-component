@@ -1,0 +1,342 @@
+/* ==========================================================================
+   Custom Properties
+   ========================================================================== */
+
+:root {
+  /* Colours */
+  --clr-primary: hsl(25, 97%, 53%);
+
+  --clr-neutral-100: hsl(217, 12%, 63%);
+  --clr-neutral-200: hsl(216, 12%, 54%);
+  --clr-neutral-300: hsl(213, 19%, 18%);
+  --clr-neutral-400: hsl(216, 12%, 8%);
+
+  /* Typography */
+  --fs-200: 11px;
+  --fs-400: 15px;
+  --fs-700: 28px;
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --lh-base: 1.6; /* 24 / 15 */
+
+  /* Border radius */
+  --br-800: 30px;
+  --br-900: 99rem;
+
+  /* Sizing */
+  --radio-size: 51px;
+  --icon-container-size: 48px;
+  --icon-size: 16px;
+}
+
+/* ==========================================================================
+   Main Component Styles
+   ========================================================================== */
+
+/* Global
+   ========================================================================== */
+
+::selection {
+  background-color: var(--clr-primary);
+  color: white;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  line-height: var(--lh-base);
+  color: white;
+
+  /* for demo only */
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+h2 {
+  --flow-spacer: 40px;
+  font-size: var(--fs-700);
+  line-height: 1.1;
+}
+
+/* Composition
+   ========================================================================== */
+
+.flow > * + * {
+  margin-top: var(--flow-spacer, 1em);
+}
+
+/* Block
+   ========================================================================== */
+
+.icon {
+  display: grid;
+  place-items: center;
+  height: var(--icon-container-size);
+  width: var(--icon-container-size);
+}
+
+.icon img {
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+
+.card {
+  background: radial-gradient(
+    circle at 50% 0,
+    #232b34,
+    #212932,
+    #202730,
+    #1e252e,
+    #1d232d,
+    #1b222b,
+    #1a2029,
+    #181e27
+  );
+
+  /* for demo only */
+  max-width: 412px;
+}
+
+.card__content header {
+  display: grid;
+  place-items: center;
+}
+
+.rating {
+  margin-top: 32px;
+  padding: 4px 20px;
+}
+
+.btn {
+  --flow-spacer: 32px;
+
+  width: 100%;
+  border: 0;
+  padding: 11px 45px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition: background-color 200ms ease;
+}
+
+.btn:hover,
+.btn:focus {
+  outline: 0;
+  background-color: white;
+  color: var(--clr-primary);
+}
+
+.rating-select {
+  --flow-spacer: 24px;
+
+  border: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+/* custom radio buttons */
+.rating-btn {
+  position: relative;
+}
+
+.rating-btn > input[type='radio'] {
+  position: absolute;
+  height: var(--radio-size);
+  width: var(--radio-size);
+  opacity: 0;
+}
+
+.rating-select label {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  display: grid;
+  place-items: center;
+
+  background-color: #262e38;
+  height: var(--radio-size);
+  width: var(--radio-size);
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: background-color 200ms ease;
+}
+
+.rating-select label:hover {
+  background-color: var(--clr-neutral-200);
+  color: white;
+}
+
+.rating-btn > input[type='radio']:checked ~ label {
+  background-color: var(--clr-primary);
+  color: white;
+}
+/* accessible focus for fieldset */
+.rating-btn > input[type='radio']:focus-visible ~ label {
+  background-color: var(--clr-neutral-200);
+  color: white;
+}
+
+/* Utility
+   ========================================================================== */
+/* Spacing */
+.pa-32 {
+  padding: 32px;
+}
+
+/* Text - colours */
+.text-primary {
+  color: var(--clr-primary);
+}
+
+.text-white {
+  color: white;
+}
+
+.text-light-gray {
+  color: var(--clr-neutral-100);
+}
+
+.text-md-gray {
+  color: var(--clr-neutral-200);
+}
+
+.text-dark-gray {
+  color: var(--clr-neutral-300);
+}
+
+.text-v-dark-gray {
+  color: var(--clr-neutral-400);
+}
+
+/* Text - alignment */
+.text-left {
+  text-align: start;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: end;
+}
+
+.fw-bold {
+  font-weight: var(--fw-700);
+}
+
+/* Background colours */
+.bg-primary {
+  background-color: var(--clr-primary);
+}
+
+.bg-light-gray {
+  background-color: var(--clr-neutral-100);
+}
+
+.bg-md-gray {
+  background-color: var(--clr-neutral-200);
+}
+
+.bg-dark-gray {
+  background-color: var(--clr-neutral-300);
+}
+
+.bg-v-dark-gray {
+  background-color: var(--clr-neutral-400);
+}
+
+/* Border radius */
+.br-lg {
+  border-radius: var(--br-800);
+}
+
+.br-full {
+  border-radius: var(--br-900);
+}
+
+/* Accessibility */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/* Exception
+   ========================================================================== */
+/*
+  The overpass web font has an alignment issue
+  preventing you from visually centring it
+*/
+.overpass-fix {
+  position: relative;
+  top: 2px;
+}
+
+/* Frontend Mentor Specific */
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 1rem;
+
+  font-size: var(--fs-200);
+  text-align: center;
+}
+
+/* Mobile
+   ========================================================================== */
+
+@media only screen and (max-width: 375px) {
+  :root {
+    --fs-400: 14px;
+    --fs-700: 24px;
+    --base-lh: 1.57;
+
+    --radio-size: 42px;
+    --icon-container-size: 40px;
+    --icon-size: 13px;
+  }
+
+  body {
+    padding-inline: 24px;
+  }
+
+  h2 {
+    --flow-spacer: 16px;
+  }
+
+  .btn {
+    --flow-spacer: 24px;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+
+  #rating-display img {
+    max-width: 144px;
+  }
+
+  .rating {
+    margin-top: 16px;
+    padding: 4px 12px;
+  }
+}
