@@ -28,93 +28,99 @@
   </head>
 
   <body class="bg-v-dark-gray">
-    <div class="[ br-lg ] [ card ]">
-      <!-- Rating state start -->
-      <section class="[ flow ] [ pa-32 ] [ card__content ]" id="rating-select">
-        <div class="[ bg-dark-gray br-full ] [ icon ]">
-          <img src="img/icon-star.svg" alt="" />
+    <main>
+      <h1 class="visually-hidden">
+        Frontend Mentor - Interactive rating component
+      </h1>
+
+      <div class="[ br-lg ] [ card ]">
+        <!-- Rating state start -->
+        <div class="[ flow ] [ pa-32 ] [ card__content ]" id="rating-select">
+          <div class="[ bg-dark-gray br-full ] [ icon ]">
+            <img src="img/icon-star.svg" alt="" />
+          </div>
+
+          <h2 class="fw-bold">How did we do?</h2>
+          <p class="text-light-gray">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <!-- Using fieldset for greater accessibility -->
+          <fieldset class="rating-select">
+            <!-- Legend hidden but still read by screen readers -->
+            <legend class="visually-hidden">
+              Please select a rating from 1 to 5.
+            </legend>
+            <div class="rating-btn">
+              <input type="radio" id="1" name="rating" value="1" />
+              <label class="[ br-full fw-bold text-light-gray ]" for="1"
+                ><span class="overpass-fix">1</span></label
+              >
+            </div>
+            <div class="rating-btn">
+              <input type="radio" id="2" name="rating" value="2" />
+              <label class="[ br-full fw-bold text-light-gray ]" for="2"
+                ><span class="overpass-fix">2</span></label
+              >
+            </div>
+            <div class="rating-btn">
+              <input type="radio" id="3" name="rating" value="3" />
+              <label class="[ br-full fw-bold text-light-gray ]" for="3"
+                ><span class="overpass-fix">3</span></label
+              >
+            </div>
+            <div class="rating-btn">
+              <input type="radio" id="4" name="rating" value="4" />
+              <label class="[ br-full fw-bold text-light-gray ]" for="4"
+                ><span class="overpass-fix">4</span></label
+              >
+            </div>
+            <div class="rating-btn">
+              <input type="radio" id="5" name="rating" value="5" />
+              <label class="[ br-full fw-bold text-light-gray ]" for="5"
+                ><span class="overpass-fix">5</span></label
+              >
+            </div>
+          </fieldset>
+
+          <button
+            id="submit"
+            class="[ bg-primary text-white fw-bold br-full ] [ btn ]"
+          >
+            <span class="overpass-fix">Submit</span>
+          </button>
         </div>
 
-        <h2 class="fw-bold">How did we do?</h2>
-        <p class="text-light-gray">
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
-        <!-- Using fieldset for greater accessibility -->
-        <fieldset class="rating-select">
-          <!-- Legend hidden but still read by screen readers -->
-          <legend class="visually-hidden">
-            Please select a rating from 1 to 5.
-          </legend>
-          <div class="rating-btn">
-            <input type="radio" id="1" name="rating" value="1" />
-            <label class="[ br-full fw-bold text-light-gray ]" for="1"
-              ><span class="overpass-fix">1</span></label
-            >
-          </div>
-          <div class="rating-btn">
-            <input type="radio" id="2" name="rating" value="2" />
-            <label class="[ br-full fw-bold text-light-gray ]" for="2"
-              ><span class="overpass-fix">2</span></label
-            >
-          </div>
-          <div class="rating-btn">
-            <input type="radio" id="3" name="rating" value="3" />
-            <label class="[ br-full fw-bold text-light-gray ]" for="3"
-              ><span class="overpass-fix">3</span></label
-            >
-          </div>
-          <div class="rating-btn">
-            <input type="radio" id="4" name="rating" value="4" />
-            <label class="[ br-full fw-bold text-light-gray ]" for="4"
-              ><span class="overpass-fix">4</span></label
-            >
-          </div>
-          <div class="rating-btn">
-            <input type="radio" id="5" name="rating" value="5" />
-            <label class="[ br-full fw-bold text-light-gray ]" for="5"
-              ><span class="overpass-fix">5</span></label
-            >
-          </div>
-        </fieldset>
-
-        <button
-          id="submit"
-          class="[ bg-primary text-white fw-bold br-full ] [ btn ]"
+        <div
+          hidden="true"
+          class="[ pa-32 text-center flow ] [ card__content ]"
+          id="rating-display"
         >
-          <span class="overpass-fix">Submit</span>
-        </button>
-      </section>
+          <header>
+            <!-- Thank you state start -->
+            <img src="img/illustration-thank-you.svg" alt="" />
+            <!-- Add rating here -->
+            <div class="[ br-full bg-dark-gray text-primary ] [ rating ]">
+              <p class="overpass-fix">
+                You selected <span id="rating-num">0</span> out of 5
+              </p>
+            </div>
+          </header>
 
-      <section
-        hidden="true"
-        class="[ pa-32 text-center flow ] [ card__content ]"
-        id="rating-display"
-      >
-        <header>
-          <!-- Thank you state start -->
-          <img src="img/illustration-thank-you.svg" alt="" />
-          <!-- Add rating here -->
-          <div class="[ br-full bg-dark-gray text-primary ] [ rating ]">
-            <p class="overpass-fix">
-              You selected <span id="rating-num">0</span> out of 5
-            </p>
-          </div>
-        </header>
+          <h2>Thank you!</h2>
+          <p class="text-light-gray">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to <br class="hide-sm" />
+            get in touch!
+          </p>
 
-        <h2>Thank you!</h2>
-        <p class="text-light-gray">
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, don’t hesitate to <br class="hide-sm" />
-          get in touch!
-        </p>
+          <!-- Thank you state end -->
+        </div>
+        <!-- Rating state end -->
+      </div>
+    </main>
 
-        <!-- Thank you state end -->
-      </section>
-      <!-- Rating state end -->
-    </div>
-
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by
       <a
         class="text-primary"
@@ -128,7 +134,7 @@
         href="https://www.frontendmentor.io/profile/squaredindex"
         >LEVOUS</a
       >.
-    </div>
+    </footer>
 
     <script src="scripts/main.js"></script>
   </body>
