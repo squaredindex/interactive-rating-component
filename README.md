@@ -59,7 +59,7 @@ I'm also learning [CUBE CSS](https://cube.fyi/), a new methodology for writing C
 Here for instance I am grouping some of my classes in the CUBE CSS style:
 ```html
 <section class="[ flow ] [ pa-32 ] [ card__content ]" id="rating-select">
-``
+```
 
 - Composition
 - Utility
@@ -85,5 +85,5 @@ I'm going to continue practising the CUBE CSS approach and build out a more comp
 
 ## Acknowledgments
 
-Thanks to Grace on the Frontend Mentor slack for suggesting to use a fieldset/radio buttons and thanks to arranrp and Ben Myers for some further accessibility feedback.
+Thanks to Grace on the Frontend Mentor slack for suggesting to use a fieldset/radio buttons and thanks to arranrp and [Ben Myers](https://benmyers.dev/) for some further accessibility feedback.
 
