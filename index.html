@@ -35,7 +35,7 @@
 
       <div class="[ br-lg ] [ card ]">
         <!-- Rating state start -->
-        <div class="[ flow ] [ pa-32 ] [ card__content ]" id="rating-select">
+        <form class="[ flow ] [ pa-32 ] [ card__content ]" id="rating-select">
           <div class="[ bg-dark-gray br-full ] [ icon ]">
             <img src="img/icon-star.svg" alt="" />
           </div>
@@ -45,6 +45,7 @@
             Please let us know how we did with your support request. All
             feedback is appreciated to help us improve our offering!
           </p>
+
           <!-- Using fieldset for greater accessibility -->
           <fieldset class="rating-select">
             <!-- Legend hidden but still read by screen readers -->
@@ -54,42 +55,42 @@
             <div class="rating-btn">
               <input type="radio" id="1" name="rating" value="1" />
               <label class="[ br-full fw-bold text-light-gray ]" for="1"
-                ><span class="overpass-fix">1</span></label
+                >1</label
               >
             </div>
             <div class="rating-btn">
               <input type="radio" id="2" name="rating" value="2" />
               <label class="[ br-full fw-bold text-light-gray ]" for="2"
-                ><span class="overpass-fix">2</span></label
+                >2</label
               >
             </div>
             <div class="rating-btn">
               <input type="radio" id="3" name="rating" value="3" />
               <label class="[ br-full fw-bold text-light-gray ]" for="3"
-                ><span class="overpass-fix">3</span></label
+                >3</label
               >
             </div>
             <div class="rating-btn">
               <input type="radio" id="4" name="rating" value="4" />
               <label class="[ br-full fw-bold text-light-gray ]" for="4"
-                ><span class="overpass-fix">4</span></label
+                >4</label
               >
             </div>
             <div class="rating-btn">
               <input type="radio" id="5" name="rating" value="5" />
               <label class="[ br-full fw-bold text-light-gray ]" for="5"
-                ><span class="overpass-fix">5</span></label
+                >5</label
               >
             </div>
           </fieldset>
 
           <button
-            id="submit"
+            type="submit"
             class="[ bg-primary text-white fw-bold br-full ] [ btn ]"
           >
             <span class="overpass-fix">Submit</span>
           </button>
-        </div>
+        </form>
 
         <div
           hidden

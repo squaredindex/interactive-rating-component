@@ -1,16 +1,13 @@
 const ratingSelect = document.querySelector('#rating-select')
 const ratingDisplay = document.querySelector('#rating-display')
 const ratingText = document.querySelector('#rating-num')
-const submit = document.querySelector('#submit')
-let rating
 
-ratingSelect.addEventListener('click', e => {
-  if (e.target.name !== 'rating') return
-  rating = e.target.id
-  ratingText.textContent = rating
-})
+ratingSelect.addEventListener('submit', e => {
+  e.preventDefault()
 
-submit.onclick = _ => {
+  const formData = new FormData(e.target)
+  ratingText.textContent = formData.get('rating')
+
   ratingSelect.setAttribute('hidden', true)
   ratingDisplay.removeAttribute('hidden')
-}
+})

@@ -149,22 +149,18 @@ h2 {
   height: var(--radio-size);
   width: var(--radio-size);
   opacity: 0;
+  cursor: pointer;
 }
 
 .rating-select label {
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 1;
-
-  display: grid;
-  place-items: center;
+  display: block;
+  line-height: 3.7;
+  text-align: center;
 
   background-color: #262e38;
   height: var(--radio-size);
   width: var(--radio-size);
 
-  cursor: pointer;
   user-select: none;
 
   transition: background-color 200ms ease;
